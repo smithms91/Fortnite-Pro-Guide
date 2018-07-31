@@ -13,7 +13,7 @@ app.use(morgan("combined"));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "./../../"));
+  res.sendFile(__dirname + "./../../index.html");
 });
 
 app.post("/fortnite", (req, res) => {
