@@ -8,7 +8,7 @@ const morgan = require("morgan");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(__dirname, "./../../"));
+app.use(express.static(__dirname + "./../../"));
 app.use(morgan("combined"));
 app.use(cors());
 
