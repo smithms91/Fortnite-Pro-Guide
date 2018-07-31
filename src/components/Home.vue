@@ -89,6 +89,11 @@ export default {
     body {
       margin: 0;
     }
+
+    .part-rumors img {
+      width: 100%;
+      padding: 0;
+    }
   }
 
   @media only screen and (max-width: 850px) {

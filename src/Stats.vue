@@ -210,8 +210,30 @@ export default {
   }
 
   select {
-    width: 100px;
+    width: 65px;
     height: 48px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    
+    .search-form {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .epic-info button {
+      margin: 0;
+      order: 3;
+    }
+    .epic-info input {
+      margin: 10px;
+      order: 2;
+    }
+
+    select {
+      order: 1;
+    }
   }
 
 </style>
