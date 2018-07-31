@@ -8,13 +8,13 @@ const morgan = require("morgan");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use("/public", express.static(path.join(__dirname, "static")));
+app.use("/public", express.static(path.join(__dirname, "static")));
 app.use(morgan("combined"));
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "./../../"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname + "./../../"));
+// });
 
 app.post("/fortnite", (req, res) => {
   request.get(`https://api.fortnitetracker.com/v1/profile/${req.body.dropDownValue}/${req.body.epicUsername}`, {
