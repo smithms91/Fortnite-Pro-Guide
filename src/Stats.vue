@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     sendInfo() {
-      axios.post(`http://fortnite-pro-guide.herokuapp.com/fortnite`, {
+      axios.post(`https://fortnite-pro-guide.herokuapp.com/fortnite`, {
         dropDownValue: this.dropDownValue,
         epicUsername: this.epicUsername
       }).then((response) => {
