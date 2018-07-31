@@ -12,9 +12,9 @@ app.use("/public", express.static(path.join(__dirname, "./../../")));
 app.use(morgan("combined"));
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname + "./../../"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "./../../"));
+});
 
 app.post("/fortnite", (req, res) => {
   request.get(`https://api.fortnitetracker.com/v1/profile/${req.body.dropDownValue}/${req.body.epicUsername}`, {
