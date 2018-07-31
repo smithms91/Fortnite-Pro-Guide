@@ -12,9 +12,17 @@ app.use("/public", express.static(path.join(__dirname, "static")));
 app.use(morgan("combined"));
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname + "../../../src/App.vue"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "../../../src/App.vue"));
+});
+
+app.get("/test", (req, res) => {
+  request.get("https://progameguides.com/fortnite/fortnite-features/fortnite-battle-royale-outfits-skins-cosmetics-list/",
+    function(error, response, body) {
+      console.log(body);
+      res.send(body);
+  })
+});
 
 app.post("/fortnite", (req, res) => {
   request.get(`https://api.fortnitetracker.com/v1/profile/${req.body.dropDownValue}/${req.body.epicUsername}`, {

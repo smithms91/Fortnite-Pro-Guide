@@ -1,16 +1,13 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <app-banner></app-banner>
-    <app-stats></app-stats>
+    <router-view />
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Header from './Header';
-import Banner from './Banner';
-import Stats from './Stats';
 import Footer from './Footer';
 
 export default {
@@ -22,8 +19,6 @@ export default {
   },
   components: {
     appHeader: Header,
-    appBanner: Banner,
-    appStats: Stats,
     appFooter: Footer
   }
 }
@@ -40,13 +35,21 @@ export default {
     outline: none;
   }
 
+  #app {
+    box-shadow: 2px 2px 50px -10px;
+  }
+
   body {
     font-family: "Roboto", sans-serif;
+    background: #fcfcfc;
   }
 
   @media only screen and (min-width: 1500px) {
     body {
       margin: 0 150px;
+    }
+    .v--modal-block-scroll {
+      width: auto;
     }
   }
 
@@ -72,6 +75,16 @@ export default {
     .all-stats {
       padding: 0;
     }
+
+    .v--modal-box,
+    .v--modal {
+      width: auto !important;
+    }
+  }
+
+  @font-face {
+    font-family: "LuckiestGuy";
+    src: url("./assets/fonts/LuckiestGuy.ttf");
   }
 
 </style>

@@ -1,23 +1,23 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
-    <img src="./assets/logo.png" alt="">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <router-link to="/"><img src="./assets/logo.png" alt=""></router-link>
     <button @click="navOpen = !navOpen" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div :class="{collapse: navOpen}" class="navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+        <li @click="navOpen = !navOpen" class="nav-item">
+          <router-link to="/" class="nav-link">Home</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Rumors</a>
+        <li @click="navOpen = !navOpen" class="nav-item">
+          <router-link @click="navOpen = !navOpen" to="/patchnotes" class="nav-link">Patch Notes</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Challenges</a>
+        <li @click="navOpen = !navOpen" class="nav-item">
+          <router-link @click="navOpen = !navOpen" to="/challenges" class="nav-link">Challenges</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Skins</a>
+        <li @click="navOpen = !navOpen" class="nav-item">
+          <router-link @click="navOpen = !navOpen" to="/skins" class="nav-link">Skins</router-link>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

@@ -95,7 +95,6 @@ export default {
       }).catch((error) => {
         console.log(error);
       })
-  
       this.show = true;
     }
   }
@@ -192,11 +191,6 @@ export default {
   .card p span {
     font-size: 25px;
     margin-left: 10px;
-  }
-
-  @font-face {
-    font-family: "LuckiestGuy";
-    src: url("./assets/fonts/LuckiestGuy.ttf");
   }
 
 </style>

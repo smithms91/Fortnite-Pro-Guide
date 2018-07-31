@@ -16,16 +16,16 @@
           <img src="./assets/linelogo.png" alt="">
           <ul class="list-unstyled">
             <li>
-              <a href="#">Home</a>
+              <router-link to="/">Home</router-link>
             </li>
             <li>
-              <a href="#">Rumors</a>
+              <router-link to="/patchnotes">Patch Notes</router-link>
             </li>
             <li>
-              <a href="#">Challenges</a>
+              <router-link to="/challenges">Challenges</router-link>
             </li>
             <li>
-              <a href="#">Battle Pass</a>
+              <router-link to="/skins">Skins</router-link>
             </li>
           </ul>
         </div>
