@@ -2,8 +2,13 @@
   <div id="stats-container">
     <div class="epic-info">
       <h1>Look up your stats!</h1>
-      <input type="text" v-model="epicUsername" placeholder="Enter your Epic Username">
-      <button @click="sendInfo">Submit</button>
+      <div class="search-form">
+        <input type="text" v-model="epicUsername" placeholder="Enter your Epic Username">
+        <select class="form-control" v-model="dropDownValue">
+          <option v-for="(platform, index) in platforms" :key="index" :selected="platform == 'pc'">{{ platform }}</option>
+        </select>
+        <button @click="sendInfo">Submit</button>
+      </div>
     </div>
     <div class="info-container" v-show="show">
       <h1>{{epicStats.epicUserHandle}}</h1>
@@ -47,8 +52,10 @@ import axios from "axios";
 export default {
   data() {
     return {
+      platforms: ["pc", "xbl", "ps4"],
       dropDownValue: "pc",
       epicUsername: "",
+      show: false,
       epicStats: {
         epicUserHandle: "",
         stats: {
@@ -80,8 +87,7 @@ export default {
             winRatio: ""
           }
         }
-      },
-      show: false
+      }
     }
   },
   methods: {
@@ -96,6 +102,11 @@ export default {
         console.log(error);
       })
       this.show = true;
+    }
+  },
+  filters: {
+    allCaps: function(value) {
+      return value.toUpperCase();
     }
   }
 }
@@ -191,6 +202,16 @@ export default {
   .card p span {
     font-size: 25px;
     margin-left: 10px;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  select {
+    width: 100px;
+    height: 48px;
   }
 
 </style>
