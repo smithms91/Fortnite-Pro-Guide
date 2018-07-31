@@ -59,7 +59,8 @@
     </div>
 
     <!-- Modal Section (Lots of code, don't open them) -->
-    <modal class="510modal" name="510modal" height="auto" :scrollable="true">
+    <modal class="patch-modal" name="510modal" height="auto" :scrollable="true">
+      <a class="btn btn-outline-secondary" id="close" @click="$modal.hide('510modal')">Close</a>
       <h1 class="dark-top">Happy Birthday Fortnite Fans!</h1>
       <div class="patch-notes-description">Celebrate #Fortnite1st with friends. Find birthday cake throughout the world and earn special cosmetics by completing challenges and quests in-game.&nbsp;<br>
         <br>
@@ -426,7 +427,7 @@
       <hr>
       </div>
     </modal>
-    <modal class="500modal" name="500modal" height="auto" :scrollable="true">
+    <modal class="patch-modal" name="500modal" height="auto" :scrollable="true">
       <h1 class="dark-top" id="">Worlds Collide in Season 5!</h1>
       <div class="patch-notes-description"><p>Viking ships, desert outposts, and ancient statues have appeared across the island. Hop in an All Terrain Kart (ATK) with your squad and uncover all-new mysteries and locations that await.&nbsp;<br>
         <br>
@@ -686,7 +687,7 @@
         <hr>
       </div>
     </modal>
-    <modal class="450modal" name="450modal" height="auto" :scrollable="true">
+    <modal class="patch-modal" name="450modal" height="auto" :scrollable="true">
       <h1 class="dark-top">Double Tap!</h1>
       <div class="patch-notes-description">Celebrate summer with a bang! Explosions from the Grenade Launcher now emit firework effects for a limited time. Double the firepower and fun, the Dual Pistols can now be found in Battle Royale. Test your aim and let your imagination run wild in the new Playground LTM. The quadrilogy questline comes to an end... Witness the conclusion of Blockbuster in its final chapter, now available in Save the World!<br>
         <br>
@@ -959,7 +960,7 @@
         </ul>
       </div>
     </modal>
-    <modal class="440modal" name="440modal" height="auto" :scrollable="true">
+    <modal class="patch-modal" name="440modal" height="auto" :scrollable="true">
       <h1 class="dark-top" id="">Mind Your Step.</h1>
       <div class="patch-notes-description">
         <p>Eligible Traps can now be placed on ramps in both Battle Royale and Save the World. The Thermal Scope Assault Rifle also makes its debut in Battle Royale, so be careful where you hide. Fight alongside a mysterious new mythic hero in the next installment of the Blockbuster quadrilogy, Blockbuster Part 3: The Cloaked Star.<br> &nbsp;</p>
@@ -1262,7 +1263,7 @@
         <hr>
       </div>
     </modal>
-    <modal class="430modal" name="430modal" height="auto" :scrollable="true">
+    <modal class="patch-modal" name="430modal" height="auto" :scrollable="true">
      <h1 class="dark" >3...2...1,</h1>
      <div class="patch-notes-description">Players, start your Carts! Patch v4.3 introduces Shopping Carts to Battle Royale. Ride solo or grab a friend to cover you as you roll around the map together.<br>
       <br>
@@ -1593,6 +1594,14 @@ export default {
 
   strong p {
     margin: 40px 0 -10px 0;
+  }
+
+  #close {
+    position: relative;
+    left: 50%;
+    top: 25px;
+    width: 100px;
+    transform: translateX(-50%);
   }
 </style>
 
