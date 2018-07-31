@@ -86,8 +86,8 @@ export default {
   },
   methods: {
     sendInfo() {
-      // let baseUrl = process.env.baseUrl || "http://localhost:3000";
-      axios.post("/fortnite", {
+      let baseUrl = process.env.baseUrl || "http://localhost:3000";
+      axios.post(baseUrl, {
         dropDownValue: this.dropDownValue,
         epicUsername: this.epicUsername
       }).then((response) => {
