@@ -1,6 +1,6 @@
-# csproguide
+# Fortnite Pro Guide
 
-> CSGO Pro Guides
+> A Vue project that offers some tips for Fortnite and allows you to look up your stats using the Fortnite Tracker API.
 
 ## Build Setup
 
