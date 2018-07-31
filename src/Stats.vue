@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     sendInfo() {
-      axios.post("http://localhost:3000/fortnite", {
+      axios.post("/fortnite", {
         dropDownValue: this.dropDownValue,
         epicUsername: this.epicUsername
       }).then((response) => {
