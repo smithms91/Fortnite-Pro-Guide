@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <router-link to="/"><img src="./assets/logo.png" alt=""></router-link>
     <button @click="navOpen = !navOpen" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon colorful"></span>
     </button>
 
     <div :class="{collapse: navOpen}" class="navbar-collapse" id="navbarSupportedContent">
@@ -80,6 +80,12 @@ export default {
     border: 1px solid black;
     padding: 5px 20px;
     color: #263238;
+  }
+
+  #app > nav > button {
+    background-color: #dcdfe1;
+    margin-top: 10px;
+    outline: none;
   }
 
 </style>

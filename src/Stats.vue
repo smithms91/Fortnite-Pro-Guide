@@ -234,6 +234,10 @@ export default {
     select {
       order: 1;
     }
+
+    .epic-info h1 {
+      margin: 20px;
+    }
   }
 
 </style>
