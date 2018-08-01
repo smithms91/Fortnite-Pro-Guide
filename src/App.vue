@@ -46,7 +46,7 @@ export default {
 
   @media only screen and (min-width: 1500px) {
     body {
-      margin: 0 150px;
+      margin: 0 250px;
     }
     .v--modal-block-scroll {
       width: auto;

@@ -64,6 +64,13 @@ export default {
       height: 100% !important;
     }
 
+  
+  @media only screen and (max-width: 800px) {
+    #banner {
+      height: 250px;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     #banner {
       height: 150px;
@@ -72,7 +79,7 @@ export default {
 
   @media only screen and (min-width: 1500px) {
     #banner {
-      height: 600px;
+      height: 500px;
     }
   }
 
