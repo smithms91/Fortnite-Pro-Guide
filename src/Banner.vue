@@ -70,7 +70,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1500px) {
     #banner {
       height: 600px;
     }
